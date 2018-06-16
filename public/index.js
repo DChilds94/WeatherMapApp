@@ -28,7 +28,19 @@ const requestComplete = function(){
   if (this.status !== 200) return;
   const jsonString = this.responseText;
   const weather = JSON.parse(jsonString);
-  console.log(weather);
+  console.log(weather)
+  displayWeather(weather);
 }
+
+const displayWeather = function(weather){
+  let weatherInfo = document.createElement('div');
+  weatherInfo.classList.add('weather');
+  let pTag = document.createElement('p');
+  pTag.textContent = weather.name;
+  weatherInfo.appendChild(pTag);
+  document.body.appendChild(weatherInfo);
+}
+
+
 
 window.addEventListener('load', app);
