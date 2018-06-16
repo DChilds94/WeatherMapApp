@@ -5,7 +5,9 @@ const app = function(){
 
 const drawMap = function() {
   const mapDiv = document.getElementById("map");
-  const mainMap = new MapWrapper(mapDiv);
+  const glasgow = [ 55.86515, -4.25763]
+  // const zoom = 15
+  const mainMap = new MapWrapper(mapDiv, glasgow, 15);
 }
 
 window.addEventListener('load', drawMap);
