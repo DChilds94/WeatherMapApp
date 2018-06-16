@@ -30,6 +30,7 @@ const requestComplete = function(){
   const weather = JSON.parse(jsonString);
   console.log(weather)
   displayWeather(weather);
+  locationButton();
 }
 
 const displayWeather = function(weather){
@@ -39,6 +40,14 @@ const displayWeather = function(weather){
   pTag.textContent = weather.name;
   weatherInfo.appendChild(pTag);
   document.body.appendChild(weatherInfo);
+}
+
+const locationButton = function(){
+  let locationButton = document.createElement('button');
+  locationButton.classList.add('button');
+  locationButton.innerText = "Show Current Location";
+  document.body.appendChild(locationButton);
+
 }
 
 
