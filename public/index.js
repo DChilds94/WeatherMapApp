@@ -2,7 +2,8 @@
 // CREATE THE APP
 const app = function(){
   drawMap();
-  let url = "http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=ec48c9ac25974ff3592099ccf76d18db";
+  // add the api key when running
+  let url = "http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=";
   makeRequest(url, requestComplete);
 }
 
